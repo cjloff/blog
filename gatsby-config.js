@@ -4,7 +4,7 @@ module.exports = {
       workflow: [
         {heading: 'Front-end', subheading: 'My front-end workflow', description: 'In my day-to-day role I work with HTML, SASS (BEM), Javascript (ES6) and Vue.js. I use webpack and gulp as my build tools. VS code is my code editor of choice.'},
         {heading: 'CMS', subheading: 'Umbraco', description: 'I enjoy working with Umbraco because of its community, great UI and overall flexibility. I\'m experienced in end-to-end Umbraco (6+) builds and MVC pattern'},
-        {heading: 'Front-end', subheading: 'My front-end workflow', description: 'I\'m a big advocate of a modular approach to web development. I enjoy the fast-paced environment of front-end as there is always new things to learn.'},
+        {heading: 'Methodology', subheading: 'My approach to development', description: 'I\'m a big advocate of a modular approach to web development. I enjoy the fast-paced environment of front-end as there is always new things to learn.'},
       ]
     },
     plugins: [
