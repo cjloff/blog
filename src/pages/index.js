@@ -1,6 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Hero from "../components/hero"
+import Introduction from "../components/introduction"
+import Quote from "../components/quote"
+import Workflow from "../components/workflow"
 import { Helmet } from "react-helmet"
 
 export default ({ data }) => (
@@ -9,10 +13,10 @@ export default ({ data }) => (
       <meta charSet="utf-8" />
       <title>{data.site.siteMetadata.title} / Home</title>
     </Helmet>
-    <h1>Welcome to my site :)</h1>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit quis quam id faucibus. Maecenas ut libero velit. Sed orci dolor, ultrices eget ex nec, tincidunt finibus sapien. 
-    </p>
+    <Hero></Hero>
+    <Introduction></Introduction>
+    <Quote></Quote>
+    <Workflow></Workflow>
   </Layout>
 )
 

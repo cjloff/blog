@@ -1,0 +1,21 @@
+.workflow {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &__sections {
+        width: 100%;
+        @media only screen and (min-width: 800px) {
+            display: flex;
+        }
+    }
+    &__col {
+        padding: 10px;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__summary {
+        text-align: center;
+        margin: 0px;
+        padding-bottom: 20px;
+    }
+}
