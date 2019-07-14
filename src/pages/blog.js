@@ -5,6 +5,8 @@ import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import "../components/hero.scss"
+import "../components/card.scss"
+import "../components/page.scss"
 
 export default ({ data }) => {
   console.log(data)
@@ -19,20 +21,19 @@ export default ({ data }) => {
             <h1 class="hero__title">My Blog Posts</h1>
             <p class="hero__description">Musings on front-end development...</p>
         </section>
-        <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug} css={css`text-decoration: none;color: inherit;`}>
-            <h3 css={css`margin-bottom: ${rhythm(1 / 4)};`}>
-              {node.frontmatter.title}{" "}
-              <span css={css`color: #bbb;`}>
-                — {node.frontmatter.date}
-              </span>
-            </h3>
-            </Link>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
+        <div class="page">
+          <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+              <Link to={node.fields.slug} className="card card--margin" key={node.id}>
+                <h2 class="card__title">
+                  {node.frontmatter.title}{" "}
+                </h2>
+                <h3 class="card__sub-title">{node.frontmatter.date}</h3>
+                <p class="card__description">{node.excerpt}</p>
+              </Link>
+          ))}
+        </div>
+
       </div>
     </Layout>
   )

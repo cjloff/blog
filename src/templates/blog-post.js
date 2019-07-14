@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import "../components/hero.scss"
+import "../components/page.scss"
 
 export default ({ data }) => {  const post = data.markdownRemark 
      return (
@@ -15,7 +16,7 @@ export default ({ data }) => {  const post = data.markdownRemark
         <div class="hero hero--slim">
           <h1 class="hero__title">{post.frontmatter.title}</h1>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div class="page" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>    
     </Layout>
   )
