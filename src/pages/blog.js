@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
+import "../components/hero.scss"
 
 export default ({ data }) => {
   console.log(data)
@@ -14,10 +15,11 @@ export default ({ data }) => {
         <title>{data.site.siteMetadata.title} / Blog</title>
       </Helmet>
       <div>
-        <h1 css={css`display: inline-block; border-bottom: 1px solid;`}>
-          My Blog Posts
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <section class="hero hero--slim">
+            <h1 class="hero__title">My Blog Posts</h1>
+            <p class="hero__description">Musings on front-end development...</p>
+        </section>
+        <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug} css={css`text-decoration: none;color: inherit;`}>
