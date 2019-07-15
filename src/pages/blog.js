@@ -22,18 +22,19 @@ export default ({ data }) => {
             <p class="hero__description">Musings on front-end development...</p>
         </section>
         <div class="page">
-          <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Link to={node.fields.slug} className="card card--margin" key={node.id}>
-                <h2 class="card__title">
-                  {node.frontmatter.title}{" "}
-                </h2>
-                <h3 class="card__sub-title">{node.frontmatter.date}</h3>
-                <p class="card__description">{node.excerpt}</p>
-              </Link>
-          ))}
+          <div class="page__container">
+            <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+                <Link to={node.fields.slug} className="card card--margin" key={node.id}>
+                  <h2 class="card__title">
+                    {node.frontmatter.title}{" "}
+                  </h2>
+                  <h3 class="card__sub-title">{node.frontmatter.date}</h3>
+                  <p class="card__description">{node.excerpt}</p>
+                </Link>
+            ))}
+          </div>
         </div>
-
       </div>
     </Layout>
   )

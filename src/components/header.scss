@@ -1,8 +1,12 @@
 .site-header {
-    padding-bottom: 20px;
+    padding: 30px;
+    position: absolute;
+    top: 0px;
     &__heading {
-        font-size: 24px;
+        font-size: 28px;
         text-decoration: none;
         font-family: 'Exo',sans-serif;
+        color: #fff;
+        text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     }
 }

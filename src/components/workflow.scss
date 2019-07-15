@@ -3,7 +3,8 @@
     padding-bottom: 20px;
     text-align: center;
     &__sections {
-        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
         @media only screen and (min-width: 800px) {
             display: flex;
         }
