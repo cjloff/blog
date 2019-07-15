@@ -2,9 +2,12 @@
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    &__sections {
+    &__container {
         max-width: 1200px;
-        margin: 0 auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__sections {
         @media only screen and (min-width: 800px) {
             display: flex;
         }

@@ -30,12 +30,14 @@ export default () => {
      }   
      );
     return (
-    <section class="workflow">
-       <h2 class="workflow__title">My workflow</h2>
-       <p class="workflow__summary">A little bit about my day-to-day workflow</p>
-       <div class="workflow__sections">
-            {workflowItems}
-       </div>
-    </section>
+     <section class="workflow">
+          <div class="workflow__container">
+               <h2 class="workflow__title">My workflow</h2>
+               <p class="workflow__summary">A little bit about my day-to-day workflow</p>
+               <div class="workflow__sections">
+                    {workflowItems}
+               </div>
+          </div>
+     </section>
      )
 }
