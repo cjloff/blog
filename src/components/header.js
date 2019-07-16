@@ -15,7 +15,7 @@ export default () => {
     )  
     return (
         <header class="site-header">
-            <Link to="/" className="site-header__heading">{data.site.siteMetadata.title}</Link>
+            <Link to="/" className="site-header__heading"></Link>
         </header>
     )
 }

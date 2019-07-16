@@ -3,9 +3,12 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     margin-bottom: 20px;
+    @media only screen and (min-width: 800px) {
+        padding-top: 0px;
+    }
     &__title {
         border-bottom: 4px solid
     }

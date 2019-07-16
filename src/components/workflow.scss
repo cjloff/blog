@@ -4,8 +4,9 @@
     text-align: center;
     &__container {
         max-width: 1200px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
     }
     &__sections {
         @media only screen and (min-width: 800px) {
