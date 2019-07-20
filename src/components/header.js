@@ -10,10 +10,10 @@ export default () => {
                 <nav class="site-navigation">
                     <ul class="site-navigation__list">
                         <li class="site-navigation__item">
-                            <Link to="/" className="site-navigation__link">Home</Link>
+                            <Link to="/" activeClassName="site-navigation__link--is-active" className="site-navigation__link">Home</Link>
                         </li>
                         <li class="site-navigation__item">
-                            <Link to="/blog" className="site-navigation__link">Blog</Link>
+                            <Link to="/blog" partiallyActive="true" activeClassName="site-navigation__link--is-active" className="site-navigation__link">Blog</Link>
                         </li>
                     </ul>
                 </nav>

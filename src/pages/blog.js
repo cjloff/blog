@@ -16,11 +16,11 @@ export default ({ data }) => {
       </Helmet>
       <div>
         <section class="hero hero--slim">
-            <h1 class="hero__title">My Blog Posts</h1>
+            <h1 class="hero__title">My Blog</h1>
             <p class="hero__description">Musings on frontend development...</p>
         </section>
         <div class="page">
-          <div class="page__container">
+          <div class="page__container page__container--slim">
             <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Link to={node.fields.slug} className="card card--margin card--left-border" key={node.id}>
