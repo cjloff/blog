@@ -3,9 +3,12 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px;
+    padding: 50px 20px;
     text-align: center;
     position: relative;
+    @media only screen and (min-width: 800px) {
+        padding: 100px 20px;
+    }
     &:before {
         content: '';
         position: absolute;

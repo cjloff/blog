@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: { 
       title: `Chester's Portfolio`, 
       workflow: [
-        {heading: 'Frontend', subheading: 'My frontend workflow', description: 'In my day-to-day role I work with HTML, SASS (BEM), Javascript (ES6) and Vue.js. I use webpack and gulp as my build tools. VS code is my code editor of choice.'},
+        {heading: 'Frontend', subheading: 'My frontend workflow', description: 'In my day-to-day role I work with HTML, Sass (BEM), Javascript (ES6) and Vue.js. I use webpack and gulp as my build tools. VS code is my code editor of choice.'},
         {heading: 'CMS', subheading: 'Umbraco', description: 'I enjoy working with Umbraco because of its community, great UI and overall flexibility. I\'m experienced in end-to-end Umbraco (6+) builds and MVC pattern.'},
         {heading: 'Methodology', subheading: 'My approach to development', description: 'I\'m a big advocate of a modular approach to web development by breaking down layouts into composable components through the use of pattern libraries.'},
       ]

@@ -1,5 +1,5 @@
 .card {
-    padding: 30px;
+    padding: 40px 20px 20px 20px; 
     height: 100%;
     text-decoration: none;
     display: block;
@@ -22,7 +22,9 @@
         font-size: 1rem;
     }
     &__description {
-        font-size: 18px;
         margin: 0px;
+        @media only screen and (min-width: 800px) {
+            font-size: 1rem;
+        }
     }
 }
