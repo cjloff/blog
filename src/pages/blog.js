@@ -17,7 +17,7 @@ export default ({ data }) => {
       <div>
         <section class="hero hero--slim">
             <h1 class="hero__title">My Blog Posts</h1>
-            <p class="hero__description">Musings on front-end development...</p>
+            <p class="hero__description">Musings on frontend development...</p>
         </section>
         <div class="page">
           <div class="page__container">
@@ -27,7 +27,6 @@ export default ({ data }) => {
                   <h2 class="card__title">
                     {node.frontmatter.title}{" "}
                   </h2>
-                  <h3 class="card__sub-title">{node.frontmatter.date}</h3>
                   <p class="card__description">{node.excerpt}</p>
                 </Link>
             ))}

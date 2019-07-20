@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Header from "../components/header"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Introduction from "../components/introduction"
@@ -13,6 +14,7 @@ export default ({ data }) => (
       <meta charSet="utf-8" />
       <title>{data.site.siteMetadata.title} / Home</title>
     </Helmet>
+    <Header></Header>
     <Hero></Hero>
     <Introduction></Introduction>
     <Quote></Quote>

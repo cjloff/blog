@@ -17,7 +17,7 @@ export default ({ data }) => {  const post = data.markdownRemark
           <h1 class="hero__title">{post.frontmatter.title}</h1>
         </div>
         <div class="page">
-          <div class="page__container" dangerouslySetInnerHTML={{ __html: post.html }} /> 
+          <div class="page__container page__container--slim" dangerouslySetInnerHTML={{ __html: post.html }} /> 
         </div>
       </div>    
     </Layout>
