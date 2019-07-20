@@ -33,7 +33,7 @@ module.exports = {
           background_color: "#6b37bf",
           theme_color: "#6b37bf",
           display: "standalone",
-          icon: "src/images/chester.JPG", // This path is relative to the root of the site.
+          icon: "src/images/thumbnail.jpg", // This path is relative to the root of the site.
         },
       },
       `gatsby-plugin-react-helmet`,

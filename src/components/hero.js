@@ -9,7 +9,7 @@ const Hero = ({ data }) => (
             <StaticQuery
             query={graphql`
                 query {
-                    placeholderImage: file(relativePath: { eq: "images/chester.jpg" }) {
+                    placeholderImage: file(relativePath: { eq: "images/thumbnail.jpg" }) {
                         childImageSharp {
                             fluid(maxWidth: 160) {
                                 ...GatsbyImageSharpFluid
