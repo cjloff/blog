@@ -1,18 +1,8 @@
 import React from "react"
 import "./header.scss"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
 
 export default () => {
-    const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }`
-    )  
     return (
         <header class="site-header">
             <Link to="/" className="site-header__heading"></Link>
