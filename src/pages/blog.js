@@ -23,7 +23,7 @@ export default ({ data }) => {
           <div class="page__container">
             <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
             {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Link to={node.fields.slug} className="card card--margin" key={node.id}>
+                <Link to={node.fields.slug} className="card card--margin card--left-border" key={node.id}>
                   <h2 class="card__title">
                     {node.frontmatter.title}{" "}
                   </h2>

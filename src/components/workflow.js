@@ -20,9 +20,8 @@ export default () => {
      const workflowItems = data.site.siteMetadata.workflow.map((item) => {
           return (
           <div class="workflow__col">
-               <div class="card">
+               <div class="card card--top-border">
                     <h2 class="card__title">{item.heading}</h2>
-                    <h3 class="card__sub-title">{item.subheading}</h3>
                     <p class="card__description">{item.description}</p>
                </div>
           </div>

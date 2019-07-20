@@ -1,10 +1,10 @@
 .workflow {
-    padding-top: 25px;
+    padding-top: 40px;
     padding-bottom: 25px;
     text-align: center;
-    @media only screen and (min-width: 800px) {
-        padding-top: 40px;
-        padding-bottom: 40px;
+    @media only screen and (min-width: 992px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     &__container {
         max-width: 1200px;
@@ -13,21 +13,32 @@
         margin: 0 auto;
     }
     &__sections {
-        @media only screen and (min-width: 800px) {
+        @media only screen and (min-width: 992px) {
             display: flex;
         }
     }
     &__col {
-        padding: 10px;
+        padding-bottom: 20px;
+        @media only screen and (min-width: 992px) {
+            padding: 30px;
+        }
     }
     &__title {
         text-align: center;
         display: inline-block;
         border-bottom: 4px solid #045666;
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+        @media only screen and (min-width: 800px) {
+            font-size: 2rem;
+        }
     }
     &__summary {
         text-align: center;
         margin: 0px;
         padding-bottom: 20px;
+        @media only screen and (min-width: 800px) {
+            font-size: 1.1rem;
+        }
     }
 }

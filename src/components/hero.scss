@@ -37,6 +37,9 @@
         text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
         position: relative;
         z-index: 5;
+        @media only screen and (min-width: 800px) {
+            font-size: 2rem;
+        }
     }
     &__description {
         color: #fff;

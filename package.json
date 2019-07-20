@@ -31,7 +31,8 @@
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-irving": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "typography-theme-kirkham": "^0.16.19",
+    "typography-theme-sutro": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
