@@ -13,7 +13,7 @@ module.exports = {
         options: {        
           name: `src`,        
           path: `${__dirname}/src/`,      
-        },    
+        }  
       },
         `gatsby-transformer-remark`,
         `gatsby-plugin-sass`,
@@ -33,10 +33,12 @@ module.exports = {
           background_color: "#6b37bf",
           theme_color: "#6b37bf",
           display: "standalone",
-          icon: "src/images/chester.JPG", // This path is relative to the root of the site.
+          icon: "src/images/chester.jpg", // This path is relative to the root of the site.
         },
       },
       `gatsby-plugin-react-helmet`,
-      'gatsby-plugin-offline'
+      'gatsby-plugin-offline',
+      `gatsby-plugin-sharp`,
+      `gatsby-transformer-sharp`
     ]
   }

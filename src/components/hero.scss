@@ -41,6 +41,23 @@
             font-size: 2rem;
         }
     }
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    &__frame {
+        width: 160px;
+        border: 5px solid #fff;
+        position: relative;
+        z-index: 10;
+        height: 160px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
     &__description {
         color: #fff;
         margin: 0px;
