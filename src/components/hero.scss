@@ -58,6 +58,10 @@
         overflow: hidden;
         margin-bottom: 30px;
         box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.39);
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+            transform: translateY(-5%);
+        }
     }
     &__description {
         color: #fff;
