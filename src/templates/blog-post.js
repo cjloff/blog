@@ -15,7 +15,9 @@ export default ({ data }) => {  const post = data.markdownRemark
       </Helmet>
       <div>
         <div class="hero hero--slim">
-          <h1 class="hero__title">{post.frontmatter.title}</h1>
+          <div class="hero__container">
+            <h1 class="hero__title">{post.frontmatter.title}</h1>
+          </div>
         </div>
         <div class="page">
           <div class="page__container page__container--slim">

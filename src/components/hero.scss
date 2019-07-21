@@ -1,19 +1,21 @@
 .hero {
     min-height: 400px;
-    padding: 80px 20px 70px 20px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    padding: 90px 20px 120px 20px;
     position: relative;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media only screen and (min-width: 800px) {
         min-height: 500px;
-        padding: 80px 30px 130px 30px;
+        padding: 80px 30px 170px 30px;
     }
     &--slim {
-        min-height: 350px;
-        padding: 80px 30px 90px 30px;
+        min-height: 400px;
+        @media only screen and (min-width: 800px) {
+            min-height: 400px;
+            padding: 80px 30px 170px 30px;
+        }
     }
     &:after {
         content: '';
@@ -37,6 +39,7 @@
         text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
         position: relative;
         z-index: 5;
+        margin: 0px;
         @media only screen and (min-width: 800px) {
             font-size: 2rem;
         }
@@ -65,9 +68,18 @@
     }
     &__description {
         color: #fff;
-        margin: 0px;
+        margin: 20px 0px 0px 0px;
         text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
         position: relative;
         z-index: 5;
+    }
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
 }

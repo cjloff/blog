@@ -16,8 +16,10 @@ export default ({ data }) => {
       </Helmet>
       <div>
         <section class="hero hero--slim">
-            <h1 class="hero__title">My Blog</h1>
-            <p class="hero__description">Musings on frontend development...</p>
+            <div class="hero__container">
+              <h1 class="hero__title">My Blog</h1>
+              <p class="hero__description">Musings on frontend development...</p>
+            </div>
         </section>
         <div class="page">
           <div class="page__container page__container--slim">
