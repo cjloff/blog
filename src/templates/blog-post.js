@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import "../components/hero.scss"
 import "../components/page.scss"
+import "../components/button.scss"
 
 export default ({ data }) => {  const post = data.markdownRemark 
      return (
@@ -22,7 +23,7 @@ export default ({ data }) => {  const post = data.markdownRemark
         <div class="page">
           <div class="page__container page__container--slim">
             <div class="page__post" dangerouslySetInnerHTML={{__html: post.html }} />
-            <Link to="/blog" class="page__link">Back to Blog List</Link>
+            <Link to="/blog" class="button"><span class="button__label">Back to Blog List</span></Link>
           </div> 
           
         </div>
