@@ -1,6 +1,6 @@
 .hero {
     min-height: 400px;
-    padding: 90px 20px 120px 20px;
+    padding: 105px 20px 120px 20px;
     position: relative;
     z-index: 10;
     display: flex;
@@ -8,13 +8,13 @@
     align-items: center;
     @media only screen and (min-width: 800px) {
         min-height: 500px;
-        padding: 80px 30px 170px 30px;
+        padding: 105px 30px 170px 30px;
     }
     &--slim {
         min-height: 400px;
         @media only screen and (min-width: 800px) {
             min-height: 400px;
-            padding: 80px 30px 170px 30px;
+            padding: 105px 30px 170px 30px;
         }
     }
     &:after {
