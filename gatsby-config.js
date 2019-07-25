@@ -28,10 +28,10 @@ module.exports = {
         resolve: `gatsby-plugin-manifest`,
         options: {
           name: "Chester's Portfolio",
-          short_name: "chesters_portfolio",
+          short_name: "Chester's Portfolio",
           start_url: "/",
-          background_color: "#6b37bf",
-          theme_color: "#6b37bf",
+          background_color: "#045666",
+          theme_color: "#045666",
           display: "standalone",
           icon: "src/images/thumbnail.jpg", // This path is relative to the root of the site.
         },
