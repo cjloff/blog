@@ -85,14 +85,14 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 
 <h2>What to watch out for...</h2>
 
-1. Do not tie naming to particular content - think about the purpose of the content and name it based on this e.g. 'Grid List' rather than 'Event List'. This means this component makes sense in more than one context (even if it's only used in one to begin with).
-2.  Try not to reach for modifiers straight away - think about how flexbox or grid can help acheive your layout aims.
+1. Do not tie naming to particular content - think about the **purpose** of the component and name it based on this e.g. 'Grid List' rather than 'Event List'. This means this component makes sense in more than one context (even if it's only used in one to begin with).
+2.  Try not to reach for modifiers straight away - think about how *flexbox* or *grid* can help achieve your layout aims.
 3. The component should work in most contexts therefore leave layout and alignment to higher level components - in other words, the component should work in isolation.
 4. Don't try and do too much with one component, if you are finding it increasingly difficult to  name the elements within the component it's likely a sign that you need to break it down into multiple components.
 
 <h2>Conclusion</h2>
 
-BEM is great for making naming your CSS easier and creating a shared language amongst the team you are working on, but above all it encourages you to break down your layouts into composable components.
+BEM is great for making it easier to name your CSS and creating a shared language amongst team members, but above all it encourages you to break down your layouts into logical purposeful components.
 
 
 
