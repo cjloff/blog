@@ -52,7 +52,7 @@ If we were to think logically about the child elements in our navigation we woul
 
 ```
 
- <h2>Modifiers</h2>
+ <h2>Modifier ⛏</h2>
 
  There may be situations where you don't need a new element, but need to modify it somehow. In the case of a navigation you may need to indicate a active state - step in **modifiers**. A modifier is defined using a double dash between either the **block** or the **element**:
 
