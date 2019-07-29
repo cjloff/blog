@@ -92,7 +92,7 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 
 <h2>Conclusion</h2>
 
-BEM is great for making it easier to name your CSS and creating a shared language amongst team members, but above all it encourages you to break down your layouts into logical purposeful components.
+BEM is great for making it easier to name your CSS and creating a shared language amongst team members, but above all it encourages you to break down your layouts into logical and purposeful components.
 
 
 
