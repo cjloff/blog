@@ -7,7 +7,7 @@ BEM has been around for a couple of years now, but even with the advent of CSS-i
 
 BEM which stands for **Block**, **Element** and **Modifier** is a methodology for writing CSS in a scoped way. For the rest of the article I'm going to be using Sass, but this can all be equally applied to plain-old css too. 
 
-<h2>Block 🧱</h2>
+<h2>Block</h2>
 
 The way the scoping works in BEM is first by defining a block (you can also think of this as a component on a page) to start writing your CSS for, for this example let's start with a navigation:
 
@@ -18,7 +18,7 @@ The way the scoping works in BEM is first by defining a block (you can also thin
 
 Pretty simple so far? This shouldn't be such a departure if you've written CSS before - the key takeaway at this stage being that you should break your page down into blocks of encapsulated CSS that you can apply to your HTML.
 
-<h2>Element 📚</h2>
+<h2>Element</h2>
 
 If we were to think logically about the child elements in our navigation we would assume that there would be a list ```<ul>```, a list item ```<li>``` and a link ```<a>```. In BEM, these child  elements are defined using a double underscore between the block and element name and would be written like so in CSS:
 
@@ -52,7 +52,7 @@ If we were to think logically about the child elements in our navigation we woul
 
 ```
 
- <h2>Modifier ⛏</h2>
+ <h2>Modifier</h2>
 
  There may be situations where you don't need a new element, but need to modify it somehow. In the case of a navigation you may need to indicate a active state - step in **modifiers**. A modifier is defined using a double dash between either the **block** or the **element**:
 
@@ -89,6 +89,21 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 2.  Try not to reach for modifiers straight away - think about how *flexbox* or *grid* can help achieve your layout aims.
 3. The component should work in most contexts therefore leave layout and alignment to higher level components - in other words, the component should work in isolation.
 4. Don't try and do too much with one component, if you are finding it increasingly difficult to  name the elements within the component it's likely a sign that you need to break it down into multiple components.
+
+<h2>In practice...</h2>
+
+You may come across a design like the below (hopefully it will look slightly better!):
+
+![Kitten One](../images/bem.jpg)
+
+In the above example I would separate the components like so:
+
+- The hero would be the highest level component, with it's own child element ```.hero__caption``` (this could contain any content)
+- The ```.hero__caption``` element would control the alignment of any child elements within it using flexbox, I would also add a few modifiers to align it to the left, center or right e.g. ```.hero__caption--align-right```.
+- The search box would be a new component, it's alignment in this context would be controlled by the parent element.
+- The tabs would be another new component, comprised of a ```.tab__item``` and ```.tab__link```.
+
+As you can see with the above example I have split the design into three different components, not only this I have decoupled the components so that the search and tabs could be easily moved from this component and used elsewhere, equally another component could sit inside the hero caption.
 
 <h2>Conclusion</h2>
 
