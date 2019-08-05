@@ -72,10 +72,12 @@ If we were to think logically about the child elements in our navigation we woul
 ```
 
 The link class modifier will output as ```.navigation__link--is-active``` in your css and you  **add** it onto the ```.navigation__link``` class when you want to indicate a active link e.g. 
+
 ```html
 <a class="navigation__link navigation__link--is-active" href="">
 </a>
 ```
+
 <h2>Why's it so great?</h2>
 
 1. Shared language within the team - this means that it's easier for a fellow team member to pick up the component and understand what it's trying to achieve from the get-go.
@@ -94,7 +96,7 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 
 You may come across a design like the below (hopefully it will look slightly better!):
 
-![Kitten One](../images/bem.jpg)
+![BEM example](../images/bem.jpg)
 
 In the above example I would separate the components like so:
 
