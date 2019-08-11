@@ -3,9 +3,13 @@ title: "An introduction to BEM"
 date: "2019-08-26"
 ---
 
-BEM has been around for a couple of years now, but even with the advent of CSS-in-JS solution and scoped CSS it is still my go-to for writing CSS. Before I go into detail on why I use BEM let's go over the basics.
+Do any of these apply to you when writing CSS?
 
-BEM which stands for **Block**, **Element** and **Modifier** is a methodology for writing CSS in a scoped way. For the rest of the article I'm going to be using Sass, but this can all be equally applied to plain-old css too. 
+1) Find it difficult to name elements in CSS.
+2) Find it difficult to manage sprawling CSS files. 
+3) Find yourself writing conflicting CSS rules.
+
+If so, BEM might be a solution for you. BEM which stands for **Block**, **Element** and **Modifier** is a methodology for writing CSS in a scoped way. For the rest of the article I'm going to be using Sass, but this can all be equally applied to plain-old css too. 
 
 <h2>Block</h2>
 
@@ -16,7 +20,7 @@ The way the scoping works in BEM is first by defining a block (you can also thin
 }
 ```
 
-Pretty simple so far? This shouldn't be such a departure if you've written CSS before - the key takeaway at this stage being that you should break your page down into blocks of encapsulated CSS that you can apply to your HTML.
+The key takeaway at this stage being that you should break your page down into blocks of encapsulated CSS that you can apply to your HTML.
 
 <h2>Element</h2>
 
@@ -78,7 +82,7 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 </a>
 ```
 
-<h2>Why's it so great?</h2>
+<h2>What are the benefits?</h2>
 
 1. Shared language within the team - this means that it's easier for a fellow team member to pick up the component and understand what it's trying to achieve from the get-go.
 2. No hugely sprawling SCSS files - preventing infinite amounts of nesting which can be hard to read and discern the purpose of each selector.
