@@ -62,18 +62,21 @@ Next up we're going to create a component called PostCodeLookUp, on this view we
 ```js
     data() {
       return {
+        isSearching: false,
         postcode: '',
-        postcodeList: [],
+        addressList: [],
         selectedAddress: '',
-        postCodeSearched: false
+        postCodeSearched: false,
+        noResults: false
       }
     }
 ```
 
 - `postcode`: this is in order to keep track of the postcode that the user enters.
-- `postcodeList`: an empty array, this will be populated with a list of addresses and displayed in the dropdown after the user has searched a valid postcode.
+- `addressList`: an empty array, this will be populated with a list of addresses and displayed in the dropdown after the user has searched a valid postcode.
 - `selectedAddress`: this will keep track of the the address that the user selects in the dropdown.
 - `postCodeSearched`: this boolean is used to conditionally show the dropdown after the user has searched a postcode (initially set to false).
+- `noResults`: boolean that will be used to show a error message if no results are returned from the api.
 
 <h2>Creating the search</h2>
 In terms of the template we are firstly going to create a text field bound to the postcode and a button that has a click event listener that fires off an addressLookUp function:
@@ -93,20 +96,26 @@ In terms of the template we are firstly going to create a text field bound to th
 - Firstly, we are going to create a function called `addressLookUp` and add it the methods object within our component.
 - Within this function we are going to use <a href="https://www.npmjs.com/package/axios" target="_blank">axios</a> (a promise based HTTP client - I am importing it directly into the component using es6 modules) to make a request from the getAddress api with our postcode model value passed in. 
 - If there is a successful response we are going to bind our postcode list to the array of addresses returned from the response, and also set our postcodeSearched to true.
+- If there are no results we will catch this error and return a message to the user.
 
 ```js
 methods: {
-    addressLookUp() {
-      axios.get(`https://api.getAddress.io/find/${this.postcode}`)
-        .then(response => { 
-            if(reponse.data.addresses.length) {
-              this.postcodeList = response.data.addresses
-              this.postCodeSearched = true
-            }
+      addressLookUp() {
+        axios.get(`https://api.getAddress.io/find/${this.postcode}?api-key={api-key-here}`)
+          .then(response => { 
+                this.addressList = response.data.addresses
+                this.postCodeSearched = true
+                this.noResults = false
           })
-    }
+          .catch(error => {
+            this.noResults = true
+            console.log(error);
+          })
+      }
 }
 ```
+**Note:** you will need to pass an <a href="https://getaddress.io/" target="_blank">api-key</a> into the URL above.
+
 <h2>Displaying the results of the search</h2>
 
 Now that we have a list of addresses returned, we need somewhere to display it:
@@ -116,15 +125,17 @@ Now that we have a list of addresses returned, we need somewhere to display it:
       <legend>Select your address</legend>
       <select v-model="selectedAddress" v-on:change="emitAddress">
         <option value='' selected>Please select</option>
-        <option :value="item" v-for="(item, index) in postcodeList" :key="index">{{item}}</option>
+        <option :value="item" v-for="(item, index) in addressList" :key="index">{{item}}</option>
       </select>
     </fieldset>
+    <p v-if="noResults">Sorry, we were unable to find that post-code</p>
 ```
 Let's breakdown the above:
 
 - We have set up a v-if and bound it to the postCodeSearched property, in the `addressLookUp` function we created above this will be set to true if a list of addresses is returned. 
 - We have bound the select to `selectedAddress` so that we can keep track of the currently selected address.
 - We have used the v-for directive to display the list of addresses returned from the `addressLookUp` function within our select.
+- If there are no results we return a helpful message
 
 Great, now we just need to update the address fields when the user selects an address in the dropdown. 
 
@@ -172,15 +183,17 @@ And there we have it, our component is now succesfully updating our address fiel
 
 <h2>Conclusion</h2>
 
-We have succesfully created a post code look up function within Vue.Js that utilizes several key vue features including:
+We have succesfully created a post code look up componentthat utilizes several key Vue.js features including:
 
 1) `v-model` to create two way binding for our address fields, postcode and selected address.
 2) `v-if` directive to conditionally show particular parts of our template.
-3) `v-for` directive for looping through our properties.
-4) Setting up event listeners for `v-on:change` and `v-on:click` and calling custom functions.
+3) `v-for` directive for looping through our address list.
+4) Setting up event listeners using `v-on:change` and `v-on:click` and calling custom functions.
 5) Using axios to return data from an api endpoint.
 6) Emitting custom events from child to parent.
 7) Creating a isolated component that can be imported onto different parent views.
+
+All code used in this tutorial can be found on this <a href="https://github.com/cjloff/vue-post-code-look-up" target="_blank">demo</a>.
 
 
 
