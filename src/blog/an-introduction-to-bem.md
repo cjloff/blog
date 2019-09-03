@@ -94,7 +94,7 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 1. Think about the **purpose** of the component and name it based on this e.g. 'Grid List' rather than 'Event List'. This means this component makes sense in more than one context (even if it's only used in one to begin with).
 2.  Try not to reach for modifiers straight away - think about how *flexbox* or *grid* can help achieve your layout aims.
 3. The component should work in most contexts therefore leave layout and alignment to higher level components - in other words, the component should work in isolation.
-4. Don't try and do too much with one component, if you are finding it increasingly difficult to  name the elements within the component it's likely a sign that you need to break it down into multiple components.
+4. Don't try and do too much with one component, if you are finding it increasingly difficult to  name the elements within the component it's likely a sign that you need to break it down into multiple components. 
 
 <h2>In practice...</h2>
 
