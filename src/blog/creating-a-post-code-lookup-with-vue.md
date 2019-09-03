@@ -183,7 +183,7 @@ And there we have it, our component is now succesfully updating our address fiel
 
 <h2>Conclusion</h2>
 
-We have succesfully created a post code look up componentthat utilizes several key Vue.js features including:
+We have succesfully created a post code look up component that utilizes several key Vue.js features including:
 
 1) `v-model` to create two way binding for our address fields, postcode and selected address.
 2) `v-if` directive to conditionally show particular parts of our template.
