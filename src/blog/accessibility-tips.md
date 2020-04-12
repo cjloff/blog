@@ -1,11 +1,11 @@
 ---
-title: "Accessibility Tips"
+title: "5 Accessibility Tips"
 date: "2020-04-11"
 ---
 
 As a frontend developer it is important to bake accessibility into your website projects from the get-go, here are some of the ways you can improve on accessibility without breaking the bank.
 
-<h2>Skip to Content</h2>
+<h2>1. Skip to Content</h2>
 
 Add a skip to content link to the top of your page to allow keyboard-only users to skip the main portion of the content on your page, this doesn’t have to be visually present on the page but can be brought into focus when the user is navigating through the page using the tab key:
 
@@ -42,7 +42,7 @@ The above screen reader text will only show when the user navigates through the 
 
 This is particularly useful when the user wants to skip to the main body of the page without navigating through all the links in the header.
 
-<h2>Screen Reader Only Text</h2>
+<h2>2. Screen Reader Only Text</h2>
 
 Screen readers such as JAWS give the user the ability to see a list of buttons, frames, links, graphics, etc, as such it is important to make sure that the naming of these elements makes sense outside of the context of where they are on the page.
 
@@ -70,7 +70,7 @@ This can be marked up in HTML as follows:
 
 The above code can be applied to any tag and will visually hide it but screen readers will still pick it up. Best of both worlds.
 
-<h2>Focus-Within Selector - a CSS solution to accessible navigation</h2>
+<h2>3. Focus-Within Selector - a CSS solution to accessible navigation</h2>
 
 When a keyboard user is navigating through the page it is important to ensure that areas of the page are not mouse-dependent e.g. they can only be opened by hovering or clicking the mouse.
 
@@ -85,7 +85,7 @@ ul:focus-within {
 ```
 This allows you to improve the accessibility of a drop-down menu using pure CSS.
 
-<h2>Aria Tags - Don’t overdo them</h2>
+<h2>4. Aria Tags - Don’t overuse them</h2>
 
 In my last project, I was marking up a mega-menu navigation with all sorts of aria tags assuming this was making it more ‘accessible’, including tags such as:
 
@@ -98,7 +98,7 @@ However, as it turns out these should not be used on navigation menus on website
 
 In my last project, I used to indicate the expanded state of a mobile menu, using ```aria-expanded``` I toggled the value dependent on if the menu was open or not, I also indicated there was a menu by using the ```aria-haspopup``` tag - I also ensured that the menu was the next element after the button in the markup order. Of course, there are other useful aria tags, however it is important to use these tags appropriately. 
 
-<h2>Alt Text - it’s fine to leave them empty!</h2>
+<h2>5. Alt Text - it’s fine to leave them empty!</h2>
 
 Alt-text is useful for describing images to users who are unable to see them, or for cases when the image doesn’t load.
 
