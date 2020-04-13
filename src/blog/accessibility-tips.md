@@ -7,7 +7,7 @@ As a frontend developer it is important to bake accessibility into your website 
 
 <h2>1. Skip to Content</h2>
 
-Add a skip to content link to the top of your page to allow keyboard-only users to skip the main portion of the content on your page, this doesn’t have to be visually present on the page but can be brought into focus when the user is navigating through the page using the tab key:
+Add a skip to content link to the top of your page to allow keyboard-only users to skip to the main content on your page, this doesn’t have to be visually present on the page but can be brought into focus when the user is navigating through the page using the tab key:
 
 ```scss
 .navigate-to-content {
@@ -33,14 +33,13 @@ Add a skip to content link to the top of your page to allow keyboard-only users 
     }
 }
 ```
-
-The above screen reader text will only show when the user navigates through the page using the tab key and will allow them to skip to the main content. You will then need to add the appropriate tag to your HTML (at the top of the body tag) and ensure your main content has the ID of 'page-content':
+You will then need to add the anchor tag to your HTML at the top of the body tag and ensure your main content has the ID of ```#page-content```:
 
 ```html
 <a href="#page-content" class="navigate-to-content">Skip to main content</a>
 ```
 
-This is particularly useful when the user wants to skip to the main body of the page without navigating through all the links in the header.
+This is particularly useful for keyboard users when you have a large amount of elements to tab through in the header.
 
 <h2>2. Screen Reader Only Text</h2>
 
