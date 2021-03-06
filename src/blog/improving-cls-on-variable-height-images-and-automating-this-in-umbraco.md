@@ -21,7 +21,7 @@ However, in our example the content is smaller in height than the image, therefo
 
 ![CLS example](../images/cls-unloaded-image-no-att.png)
 
-The components overall height is drastically reduced meaning when the image loads (either on page load or via lazy loading) it will cause not only for the component to change in height but other elements on the page to move about. How do we prevent this issue? The simple solution to this is to add width and height attributes on the image tag and set the corresponding values to the dimensions of the image:
+The components overall height without the image loaded is much shorter, therefore when the image is loaded (either on page load or via lazy loading) it will cause not only for the component to change in height but other elements on the page to move about. How do we prevent this issue? The simple solution to this is to add width and height attributes on the image tag and set the corresponding values to the dimensions of the image:
 
 ```html
 <img class="component__image" width="600" height="800" src="https://images.pexels.com/photos/1067333/pexels-photo-1067333.jpeg?width=600">
@@ -45,8 +45,8 @@ It is possible to automate this process in Umbraco with the following razor code
 
 This code is broken down as follows:
 
-1. We set the image width and height attributes to their original source dimensions of the image in the media library e.g. 1200 x 1800 using the ```umbracoWidth``` and ```umbracoHeight``` properties.
-2. As we are using CSS to set the image width to 100% and height to auto the browser will effectively work out the space required for the image, even if the original source image dimensions exceeds the width of the container it's placed in. For example, if the image (with original dimensions of 1200px x 1800px) is placed in a container that has a width of 600px, the browser will work out that the effective space that needs to be reserved is 600px x 900px.
+1. Set the image width and height attributes to their original source dimensions of the image in the media library e.g. 1200 x 1800 using the ```umbracoWidth``` and ```umbracoHeight``` properties.
+2. As I'm using CSS to set the image width to 100% and height to auto the browser will effectively work out the space required for the image, even if the original source image dimensions exceeds the width of the container it's placed in. For example, if the image (with original dimensions of 1200px x 1800px) is placed in a container that has a width of 600px, the browser will work out that the effective space that needs to be reserved is 600px x 900px.
 2. Use the ```GetCropUrl``` method (which utilizes <a href="https://imageprocessor.org/">.NET ImageProcessor</a> under the hood) and only set the width property to 600px, this will automatically set the height of the returned image to 900px. This will ensure that we load in an image with the correct dimensions and appropriate weight.
 
 This is a simple technique that solves CLS issues on variable height images.
