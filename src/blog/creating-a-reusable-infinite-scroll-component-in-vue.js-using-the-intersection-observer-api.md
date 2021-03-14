@@ -166,7 +166,7 @@ Let's break this down:
 - I am using a v-for directive to display our list of cards and adding this between the opening and closing tag of our InfiniteScroll component, this will insert the content in the ```<slot />``` area of this component which we set up earlier.
 - I'm also wrapping the v-for loop into a transition group to add a fade animation as more data gets added to our list.
 - I am listening for the ```@update``` method that is emitted from the InfiniteScroll component (which is triggered every time the user intersects with our trigger element), if this is emitted the parent component will run the method ```loadMoreData``` that incrementally pushes more data to the list.
-- The trigger element will move down the page as more items are added to our list and the update method be called every time the user intersects with it.
+- The trigger element will move down the page as more items are added to our list and the ```loadMoreData``` method be called every time the user intersects with it.
 - I am also passing in the current page and last page (via ```:current-index``` and ```:last-index``` props) into the InfintiteScroll component so that we can unobserve the trigger element when we've reached the end of the list.
 
 <h2>Summing Up</h2>
