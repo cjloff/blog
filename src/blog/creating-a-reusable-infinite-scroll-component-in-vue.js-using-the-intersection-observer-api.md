@@ -72,7 +72,7 @@ watch: {
 }
 ```
 
-<h2>Using the InfiniteScroll Component</h2>
+<h2>Using the Infinite Scroll Component</h2>
 
 Now, let's utilise our InfiniteScroll component on an example that shows and infinitely load a list of cards. Firstly, I've created a parent component (App.vue) and in my data object I am setting up a variable to store my list, my current page and last page:
 
