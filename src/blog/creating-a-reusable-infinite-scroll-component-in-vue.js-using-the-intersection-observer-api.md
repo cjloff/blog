@@ -7,7 +7,7 @@ date: "2021-03-21"
 
 The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> allows us to asynchronously detect when an element is within the viewport. Using this API, we can set up an observer and register a callback function that is executed whenever a specified element enters or exits the viewport. This is more efficient than using window scroll events and getBoundingClientRect to detect an elements position which can be costly performance wise (even with a debounce implemented).
 
-In this blog post, I am going to utilize the Intersection Observer API to create a re-usable infinite scroll component in Vue.Js, whereby as the user scrolls to the bottom of the component more content is automatically added. In this tutorial, I will utilize this component to infinitely load a list of cards.
+In this blog post, I am going to utilize the Intersection Observer API to create a re-usable infinite scroll component in Vue.Js, whereby as the user scrolls to the bottom of the component more content is automatically added. Specifically, I will utilize this component to infinitely load a list of cards.
 
 <h2>Setting up the Infinite Scroll Component</h2>
 
@@ -21,7 +21,7 @@ data:function() {
 }
 ```
 
-On mounted, I am instantiating a new IntersectionObserver and assigning it to the observer variable I've created in our data object. Additionally, within the IntersectionObserver callback I am checking if I've intersected with the target element and if so <a href="https://vuejs.org/v2/guide/components-custom-events.html">emitting</a> a ```update``` event to the parent component:
+On mounted, I am instantiating a new IntersectionObserver and assigning it to the observer variable I've created in our data object. Within the IntersectionObserver callback I am checking if I've intersected with the target element and if so <a href="https://vuejs.org/v2/guide/components-custom-events.html">emitting</a> a ```update``` event to the parent component:
 
 ```js
 mounted() {
@@ -60,7 +60,7 @@ props: {
 }
 ```
 
-By passing these props down I will be able to check if we are at the last index and if so disable the watching of our trigger element using the ```unobserve``` method:
+By passing these props down I will be able to check if we are at the last index (the end of the data we are infinitely loading) and if so disable the watching of our trigger element using the ```unobserve``` method:
 
 ```js
 watch: {
@@ -74,7 +74,7 @@ watch: {
 
 <h2>Using the Infinite Scroll Component</h2>
 
-Now, let's utilise our InfiniteScroll component on an example that shows and infinitely loads a list of cards. Firstly, I've created a parent component (App.vue) and in my data object I am setting up a variable to store my list, my current page and last page:
+Now, let's utilise our Infinite Scroll component on an example that shows and infinitely loads a list of cards. Firstly, I've created a parent component (App.vue) and in my data object I am setting up a variable to store my list, my current page and last page:
 
 ```js
 data: function() {
