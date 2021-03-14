@@ -5,7 +5,7 @@ date: "2021-03-21"
 
 <h2>Introduction</h2>
 
-The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> allows us to asynchronously detect when an element is within the viewport. Using this API, we can set up an observer and register a callback function that is executed whenever a specified element enters or exits the viewport. This is better than using methods that rely on window scroll to detect the position of an element as this slows down the main thread (even with a debounce implemented).
+The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> allows us to asynchronously detect when an element is within the viewport. Using this API, we can set up an observer and register a callback function that is executed whenever a specified element enters or exits the viewport. This is more efficient than using window scroll events and getBoundingClientRect to detect an elements position which can be costly performance wise (even with a debounce implemented).
 
 In this blog post, I am going to utilize the Intersection Observer API to create a re-usable infinite scroll component in Vue.Js, whereby as the user scrolls to the bottom of the component more content is automatically added. In this tutorial, I will utilize this component to infinitely load a list of cards.
 
