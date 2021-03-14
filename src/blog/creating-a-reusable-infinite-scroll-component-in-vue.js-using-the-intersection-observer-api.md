@@ -124,7 +124,7 @@ I've also set up a method to increment the current page and push new data to our
 
 ```js
 loadMoreData() {
-    if(this.currentPage < this.currentPage) {
+    if(this.currentPage < this.lastPage) {
       this.currentPage++
       this.list.push(...Data.items[this.currentPage])
     }
