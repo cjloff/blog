@@ -45,7 +45,7 @@ Furthermore, I am setting up a target element to be watched by our ```Intersecti
 </template>
 ```
 
-As the user scrolls down and intersects with the trigger element our callback function will be called. You will also notice I have added ```<slot />``` element above the trigger element, this will alow us to add and push content to this area every time the user intersects with the trigger element (the trigger element will move down the page as more content is added). Also, I am allowing two props to be passed down:
+As the user scrolls down and intersects with the trigger element our callback function will be called. You will also notice I have added ```<slot />``` element above the trigger element, this will alow us to firstly add initial content and then push new content to this area every time the user intersects with the trigger element (the trigger element will move down the page as more content is added). Also, I am allowing two props to be passed down:
 
 ```js
 props: {
