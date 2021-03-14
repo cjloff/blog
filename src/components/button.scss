@@ -1,3 +1,5 @@
+@import 'variables'; 
+
 .button {
     padding: 8px 15px;
     position: relative;
@@ -5,7 +7,7 @@
     display: inline-block;
     &:hover {
         &:before {
-            background-color: darken(#045666, 5%);
+            background-color: darken($primary, 5%);
         }
     }
     &__label {
@@ -20,7 +22,7 @@
     &:before {
         content: '';
         z-index: 1;
-        background-color: #045666;
+        background-color: $primary;
         position: absolute;
         width: 100%;
         height: 100%;

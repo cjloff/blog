@@ -1,3 +1,5 @@
+@import 'variables'; 
+
 .workflow {
     padding-top: 40px;
     padding-bottom: 25px;
@@ -27,7 +29,7 @@
     &__title {
         text-align: center;
         display: inline-block;
-        border-bottom: 4px solid #045666;
+        border-bottom: 4px solid $primary;
         font-size: 1.5rem;
         padding-bottom: 5px;
         @media only screen and (min-width: 800px) {
