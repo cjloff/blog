@@ -5,7 +5,7 @@ date: "2021-03-21"
 
 <h2>Introduction</h2>
 
-The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> allows us to asynchronously detect when an element is within the viewport. Using this API, we can set up an observer and register a callback function that is executed whenever a specified element enters or exits the viewport. This is more efficient than using window scroll events and getBoundingClientRect to detect an elements position which can be costly performance wise (even with a debounce implemented).
+The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> allows us to asynchronously detect when an element is within the viewport. Using this API, we can set up an observer and register a callback function that is executed whenever a specified element enters or exits the viewport. This is more efficient than using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event">window scroll</a> events and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect</a> to detect an elements position which can be costly performance wise (even with a debounce implemented).
 
 In this blog post, I am going to utilize the Intersection Observer API to create a re-usable infinite scroll component in Vue.Js, whereby as the user scrolls to the bottom of the component more content is automatically added. Specifically, I will utilize this component to infinitely load a list of cards.
 
@@ -21,7 +21,7 @@ data:function() {
 }
 ```
 
-On mounted, I am instantiating a new IntersectionObserver and assigning it to the observer variable I've created in our data object. Within the IntersectionObserver callback I am checking if I've intersected with the target element and if so <a href="https://vuejs.org/v2/guide/components-custom-events.html">emitting</a> a ```update``` event to the parent component:
+On mounted, I am instantiating a new IntersectionObserver and assigning it to the observer variable I've created in our data object. Within the IntersectionObserver callback I am checking if I've intersected with a target element and if so <a href="https://vuejs.org/v2/guide/components-custom-events.html">emitting</a> a ```update``` event to the parent component:
 
 ```js
 mounted() {
@@ -103,7 +103,7 @@ export default data
 import Data from './Data/data.js'
 ```
 
-In my methods I've created an initializer to assign the first set of data to our list variable, set the current page variable to 0 and worked out our last page based on our imported data's length:
+In my methods I've created an initializer to assign the first set of data to our list, set the current page to 0 and worked out our last page based on our imported data's length:
 
 ```js
 setUpInitialData() {
@@ -120,7 +120,7 @@ mounted() {
 }
 ```
 
-I've also set up a method to increment the current page and push new data to our list variable (I am using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread</a> as this will flatten the array as it's pushed in):
+I've also set up a method to increment the current page and push new data to our list (I am using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread</a> as this will flatten the array as it's pushed in):
 
 ```js
 loadMoreData() {
