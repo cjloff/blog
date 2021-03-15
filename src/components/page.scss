@@ -17,6 +17,11 @@
         }
     }
     &__post {
+        a {
+            &:hover {
+                color: $primary;
+            }
+        }
         h2 {
             position: relative;
             &:after {

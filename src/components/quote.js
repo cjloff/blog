@@ -31,7 +31,7 @@ export default () => (
                 return(<div>
                     <h2 class="quote__author">Latest Blog Post</h2>
                     <div class="quote__main">
-                        <Link to={latestBlogPost.fields.slug} key={latestBlogPost.id}>
+                        <Link className="quote__link" to={latestBlogPost.fields.slug} key={latestBlogPost.id}>
                             <h3 class="quote__sub">{latestBlogPost.frontmatter.title}{" "}</h3>
                             <p class="quote__text">{latestBlogPost.excerpt}</p>
                         </Link>
