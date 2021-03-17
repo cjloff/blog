@@ -37,7 +37,7 @@
     &__main {
         padding-left: 20px;
         margin-left: 20px;
-        border-left: 10px solid $primary;
+        border-left: 10px solid $tertiary;
         padding-top: 20px;
         padding-bottom: 20px;
         @media only screen and (min-width: 800px) {
@@ -61,7 +61,7 @@
         }
     }
     &__title {
-        border-bottom: 4px solid $primary;
+        border-bottom: 4px solid $tertiary;
         font-size: 1.5rem;
         padding-bottom: 5px;
         display: inline-block;
@@ -81,7 +81,7 @@
     }
     &__link {
         &:hover {
-            color: $primary;
+            color: $tertiary;
         }
     }
 }

@@ -5,14 +5,16 @@
     height: 100%;
     text-decoration: none;
     display: block;
-    &:hover {
-        color: $primary;
+    &a {
+        &:hover {
+            color: $tertiary;
+        }
     }
     &--top-border {
-        border-top: 10px solid $primary;
+        border-top: 10px solid $tertiary;
     }
     &--left-border {
-        border-left: 10px solid $primary;
+        border-left: 10px solid $tertiary;
         padding-left: 50px;
     }
     &--margin {

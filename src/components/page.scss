@@ -19,11 +19,12 @@
     &__post {
         a {
             &:hover {
-                color: $primary;
+                color: $tertiary;
             }
         }
         h2 {
             position: relative;
+            margin-bottom: 30px;
             &:after {
                 content: '';
                 width: 120px;
@@ -31,7 +32,7 @@
                 bottom: -10px;
                 left: 0px;
                 position: absolute;
-                background-color: $primary;
+                background-color: $tertiary;
             }
         }
     }
