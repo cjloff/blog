@@ -7,7 +7,7 @@ You may have come across the following recommendation when running your website 
 
 > Remove dead rules from stylesheets [...] to reduce unnecessary bytes consumed by network activity.
 
-I am going to recommend a workflow for structuring and writing CSS and a way to produce dynamic CSS bundles that only load the CSS needed for each page in a Umbraco website.
+I am going to recommend a workflow for structuring and writing CSS and a way to produce a dynamic CSS bundle that only includes the required CSS for each page within an Umbraco website.
 
 For this blog article we will be:
 
@@ -16,7 +16,7 @@ For this blog article we will be:
 3. Using Gulp to compile SCSS to CSS
 4. Using client dependency to only load CSS required for each page
 
-<h2>Structuring the CSS using ITCSS</h2>
+<>Structuring the CSS using ITCSS</>
 
 <a href="https://itcss.io/">ITCSS</a> (created by Harry Roberts) stands for inverted triangle CSS and helps you to organize your CSS into different layers depending on their specificity, it is comprised of the following:
 
