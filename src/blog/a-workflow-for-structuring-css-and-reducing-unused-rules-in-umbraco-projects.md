@@ -16,7 +16,7 @@ For this blog article we will be:
 3. Using Gulp to compile SCSS to CSS
 4. Using client dependency to only include CSS required for each page
 
-<>Structuring the CSS using ITCSS</>
+<h2>Structuring the CSS using ITCSS</h2>
 
 <a href="https://itcss.io/">ITCSS</a> (created by Harry Roberts) stands for inverted triangle CSS and helps you to organize your CSS into different layers depending on their specificity, it is comprised of the following:
 
