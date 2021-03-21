@@ -183,7 +183,7 @@ All in, I have built up dynamic CSS bundle by declaring the CSS needed in each l
 
 <h2>Conclusion</h2>
 
-We have combined ITCSS, BEM and client dependency to provide a workflow for building and maintaining our CSS in Umbraco, and in the long run reduced the amount of redundant CSS rules being loaded on each page. 
+We have combined ITCSS, BEM and client dependency to provide a workflow for building and maintaining our CSS in Umbraco, and in the long run reduced the amount of redundant CSS rules being loaded.
 
 
 
