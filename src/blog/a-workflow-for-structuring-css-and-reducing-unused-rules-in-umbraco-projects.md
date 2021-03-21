@@ -7,7 +7,7 @@ You may have come across the following recommendation when running your website 
 
 > Remove dead rules from stylesheets [...] to reduce unnecessary bytes consumed by network activity.
 
-I am going to recommend a workflow for structuring and writing CSS and a way to produce a dynamic CSS bundle that only includes the required CSS for each page within an Umbraco website.
+To solve the above, I am going to recommend a workflow for structuring and writing CSS and a way to produce a dynamic CSS bundle that only includes the CSS required for each page within a Umbraco website.
 
 For this blog article we will be:
 
