@@ -14,7 +14,7 @@ For this blog article we will be:
 1. Structuring the CSS using ITCSS
 2. Utilizing BEM methodology to write CSS components
 3. Using Gulp to compile SCSS to CSS
-4. Using client dependency to only load CSS required for each page
+4. Using client dependency to only include CSS required for each page
 
 <>Structuring the CSS using ITCSS</>
 
@@ -98,7 +98,7 @@ With each folder containing the outputted CSS for each file e.g.
 <strong>Component folder:</strong>
 ![CSS example](../images/components.JPG)
 
-<h2>Using client dependency to only load CSS required for each page</h2>
+<h2>Using client dependency to only include CSS required for each page</h2>
 
 Now that we have individual CSS files being outputted the next step is to utilize client dependency to build up a dynamic CSS bundle. <a href="https://github.com/Shazwazza/ClientDependency">Client dependency</a> is a framework that allows you to build a dynamic CSS bundle based on CSS dependencies you have declared in your razor files.
 
