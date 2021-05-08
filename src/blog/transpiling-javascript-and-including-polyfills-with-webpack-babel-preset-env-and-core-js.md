@@ -5,6 +5,7 @@ date: "2021-03-18"
 
 I am going to use <a href="https://babeljs.io/docs/en/babel-preset-env">babel-preset-env</a> to transpile our JS from ES6 to ES5 and core-js (a library of polyfills) to include the polyfills needed for your application.
 
+
 You may be used to including polyfills like so at the top of your entry file:
 
 ```js
@@ -12,6 +13,14 @@ import("babel-polyfill");
 ```
 
 This will bring in a range of polyfills allowing you to use ES6 features and more in older browsers. However, the main issue is that this is a brute force approach and may bring in polyfills that are unneeded for your application and ultimately bloat your javascript bundle (the package itself has also been deprecated). Instead, in this tutorial we will utilize <a href="https://github.com/zloirock/core-js">core-js</a> to bring in polyfills based on your browser support.
+
+<h2>Some definitions...</h2>
+
+Before we continue let's clarify what we mean by polyfills and transpiling.
+
+Polyfills provide specific functionality that you would expect the browser (API) to natively have, for example <a href="https://caniuse.com/promises">IE11 does not have promises</a> so you may include a polyfill that emulates this functionality. 
+
+On the other hand, transpiling will transform your code to work in a particular target environment, for example if you wanted to use arrow functions (ES6 syntax) in your code but wanted support IE11 you would need to transform it into ES5 compatible code that the browser understands. 
 
 
 <h2>Setup</h2>
