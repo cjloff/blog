@@ -20,7 +20,7 @@ Before we continue let's clarify what we mean by polyfills and transpiling.
 
 Polyfills provide specific functionality that you would expect the browser (API) to natively have, for example <a href="https://caniuse.com/promises">IE11 does not have promises</a> so you may include a polyfill that emulates this functionality. 
 
-On the other hand, transpiling will transform your code to work in a particular target environment, for example if you wanted to use arrow functions (ES6 syntax) in your code but wanted support IE11 you would need to transform it into ES5 compatible code that the browser understands. 
+On the other hand, transpiling will transform your code to work in a particular target environment, for example if you wanted to use arrow functions (ES6 syntax) in your code but wanted to support IE11 you would need to transform it into ES5 compatible code that the browser understands. 
 
 
 <h2>Setup</h2>
