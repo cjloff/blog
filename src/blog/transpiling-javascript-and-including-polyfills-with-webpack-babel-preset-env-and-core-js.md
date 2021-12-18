@@ -32,7 +32,7 @@ npm install --save-dev babel-loader @babel/core @babel/preset-env core-js
 
 ```
 
-Next up let's add a babel-loader rule within our webpack config, and add babel-preset-env to our presets:
+Let's add a babel-loader rule within our webpack config, and add babel-preset-env to our presets:
 
 ```js
 module: {
