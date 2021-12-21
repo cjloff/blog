@@ -16,8 +16,8 @@ Essentially you build components utilizing existing utility classes rather than 
 In the past few years I had been using BEM methodology to write most of my CSS and it had been mostly working well, however I was noticing a few issues with it, namely:
 
 - One of my main aims working at a agency is being able to easily share components across projects, this is difficult with BEM. Having to manually move the CSS file, HTML and import it into your CSS file can be cumbersome - especially when project specific mixins and variables are needed as well.
-- The CSS only becomes larger overtime due to new BEM classes being bolted on rather than trying to re-use whats there. It's difficult to reason with code that has been sitting there for a couple of years.
-- Due to BEM being descriptive, different team members can come up with very different classes for the same component leading to inconsistencies in the CSS, for example all these modifiers could  be used for a component that is promoted in some way: ```--is-featured```, ```--highlight```, ```--is-promoted```, ```--special```.
+- It's difficult to tell how a change to BEM class may impact on the front-end, especially if you don't know how it's used which often leads to new classes being bolted on instead, which in turn increases the CSS file size.
+- Due to BEM being descriptive, different team members can come up with very different classes for the same component leading to inconsistencies in the CSS, for example all these modifiers could  be used for a component that is promoted in some way: ```--is-featured```, ```--highlight```, ```--is-promoted```, ```--special```. 
 - Even though BEM provides a common way of writing CSS, it easy for inconsistencies to appear in the code especially in a project with multiple team members e.g. nested element selectors when really it should be split up into multiple BEM components: ```.block__element__element--modifier--modifier```
 
 <h2>Comparing BEM v Tailwind</h2>
@@ -92,7 +92,6 @@ First of all, the best way to explore the differences is through writing a compo
 - On the other hand, the tailwind component is leveraging utility classes that will be re-used in other components.
 - In the tailwind example I've created the component directly in the view using utility classes, whereas with BEM I've had to write the CSS separately. This means I do not have to swap between the CSS and view file while developing.
 
-
 <h2>Is this just inline styles?</h2>
 
 A common argument against Tailwind is that it's just inline styles in a different guise, however this isn't the case:
@@ -105,11 +104,11 @@ A common argument against Tailwind is that it's just inline styles in a differen
 
 - **Just in time CSS:** As part of the build process tailwind only generates the utility classes you've used in your HTML resulting in a small CSS output (by default in V3). I have noticed a 50% reduction in CSS file size compared to a BEM project that had similar features.
 - **Config driven:** All tailwind projects are set up with a config file that allows the developer to control the project holistically e.g. spacing, colours, sizing, media queries. It's easy to change the look of the website by changing a few config values.
-- **Sharing CSS across projects:** Easy to move a tailwind component to another tailwind project, it will then just 'inherit' the look of the website via the config.
+- **Sharing CSS across projects:** Easy to move a tailwind component to another tailwind project, it will then just inherit the look of the website via the config.
 - **Utility first, not utility only:** Your not locked into just using utility classes - you can write bespoke CSS when needed.
 - **Great documentation:** The documentation is very thorough, making it easy to learn and on-board new team members.
 - **Readable:** It is easy to to review a tailwind component and figure out what it does by just reading the class names.
-- **Working straight in the view/HTML:** as you will be mostly using existing utility classes you'll be working directly in the view rather than also working in a separate CSS file.
+- **Working straight in the view/HTML:** As you will be mostly using existing utility classes you'll be working directly in the view rather than also working in a separate CSS file. Also, because you compose your CSS directly in the view you can be sure the changes you make will only effect the current view.
 
 <h2>Disadvantages</h2>
 
