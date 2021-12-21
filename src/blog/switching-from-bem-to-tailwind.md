@@ -16,9 +16,9 @@ Essentially you build components utilizing existing utility classes rather than 
 In the past few years I had been using BEM methodology to write most of my CSS and it had been mostly working well, however I was noticing a few issues with it, namely:
 
 - One of my main aims working at a agency is being able to easily share components across projects, this is difficult with BEM. Having to manually move the CSS file, HTML and import it into your CSS file can be cumbersome - especially when project specific mixins and variables are needed as well.
-- It's difficult to tell how a change to BEM class may impact on the front-end, especially if you don't know how it's used which often leads to new classes being bolted on instead, which in turn increases the CSS file size.
-- Due to BEM being descriptive, different team members can come up with very different classes for the same component leading to inconsistencies in the CSS, for example all these modifiers could  be used for a component that is promoted in some way: ```--is-featured```, ```--highlight```, ```--is-promoted```, ```--special```. 
-- Even though BEM provides a common way of writing CSS, it easy for inconsistencies to appear in the code especially in a project with multiple team members e.g. nested element selectors when really it should be split up into multiple BEM components: ```.block__element__element--modifier--modifier```
+- It's difficult to tell what impact changing a existing BEM class will have, especially if you don't know how it's used which often leads to new classes being bolted on instead, which in turn increases the CSS file size.
+- Due to BEM being descriptive, different team members can come up with different classes for the same component leading to inconsistencies in the CSS, for example all these modifiers could  be used for a component that is promoted in some way: ```--is-featured```, ```--highlight```, ```--is-promoted```, ```--special```. 
+- Even though BEM provides a methodology for writing CSS, it easy for inconsistencies to appear in the code especially in a project with multiple team members e.g. nested element selectors when really it should be split up into multiple BEM components: ```.block__element__element--modifier--modifier```
 
 <h2>Comparing BEM v Tailwind</h2>
 
@@ -94,7 +94,7 @@ First of all, the best way to explore the differences is through writing a compo
 
 <h2>Is this just inline styles?</h2>
 
-A common argument against Tailwind is that it's just inline styles in a different guise, however this isn't the case:
+A common argument against Tailwind is that it's just inline styles in a different guise, however here are a few reasons that this isn't the case:
 
 - Your utility classes are governed by a set of rules in your config that dictate the over-all look and feel of your website e.g. spacing, colours and so on. Inline styles won't do this.
 - Provides a consistent and shared way of writing CSS by leveraging existing utility classes, inline styles would be wildly inconsistent if applied over a project.
@@ -108,7 +108,7 @@ A common argument against Tailwind is that it's just inline styles in a differen
 - **Utility first, not utility only:** Your not locked into just using utility classes - you can write bespoke CSS when needed.
 - **Great documentation:** The documentation is very thorough, making it easy to learn and on-board new team members.
 - **Readable:** It is easy to to review a tailwind component and figure out what it does by just reading the class names.
-- **Working straight in the view/HTML:** As you will be mostly using existing utility classes you'll be working directly in the view rather than also working in a separate CSS file. Also, because you compose your CSS directly in the view you can be sure the changes you make will only effect the current view.
+- **Working straight in the view/HTML:** As you will be mostly using existing utility classes you'll be working directly in the view rather than also working in a separate CSS file. Also, because you compose your classes directly in the HTML you can be sure changes you make only effect the current view you are working on.
 
 <h2>Disadvantages</h2>
 
