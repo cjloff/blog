@@ -1,66 +1,89 @@
-import React from "react"
+import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
-import "../components/hero.scss"
-import "../components/card.scss"
-import "../components/page.scss"
 
-export default ({ data }) => {
-  console.log(data)
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const posts = data.allMarkdownRemark.nodes
+
+  if (posts.length === 0) {
+    return (
+      <Layout location={location} title={siteTitle}>
+        <Seo title="Blog" />
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
+      </Layout>
+    )
+  }
+
   return (
-    <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{data.site.siteMetadata.title} / Blog</title>
-      </Helmet>
-      <div>
-        <section class="hero hero--slim">
-            <div class="hero__container">
-              <h1 class="hero__title">My Blog</h1>
-              <p class="hero__description">Musings on frontend development...</p>
-            </div>
-        </section>
-        <div class="page">
-          <div class="page__container page__container--slim">
-            <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Link to={node.fields.slug} className="card card--margin card--left-border" key={node.id}>
-                  <h2 class="card__title">
-                    {node.frontmatter.title}{" "}
-                  </h2>
-                  <p class="card__description">{node.excerpt}</p>
-                </Link>
-            ))}
-          </div>
-        </div>
+    <Layout location={location} title={siteTitle}>
+      <Seo title="Home" />
+      <div className="container max-w-screen-lg mx-auto px-4 mt-16 mb-16">
+      <h1 className="text-4xl font-display mb-12 text-echo text-center font-bold" itemProp="headline">Blog Posts</h1>
+      <ol className="grid md:grid-cols-3 md:gap-12" style={{ listStyle: `none` }}>
+        {posts.map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+          return (
+            <li key={post.fields.slug}>
+              <Link to={post.fields.slug} itemProp="url" className="group">
+                <article
+                  className="mb-4 md:mb-0"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  <header>
+                    <h2 className="text-2xl font-semibold mb-2 text-bravo group-hover:text-delta group-hover:decoration-delta underline decoration-bravo">
+                      
+                        <span itemProp="headline">{title}</span>
+                    
+                    </h2>
+                  </header>
+                  <section>
+                    <p className="text-lg leading-relaxed"
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                  </section>
+                </article>
+              </Link>
+            </li>
+          )
+        })}
+      </ol>
       </div>
     </Layout>
   )
 }
 
-export const query = graphql `
-{
-  site {
-    siteMetadata {
-      title
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
     }
-  }
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-    totalCount
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "DD MMMM, YYYY")
-        }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
         fields {
           slug
         }
-        excerpt
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
       }
     }
   }
-}
 `

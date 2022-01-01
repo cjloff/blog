@@ -1,42 +1,43 @@
 import React from "react"
-import "./workflow.scss"
-import "./card.scss"
 import { useStaticQuery, graphql } from "gatsby"
 
-export default () => {
+export default function Workflow() {
+     
      const data = useStaticQuery(graphql`
-     {
-       site {
-          siteMetadata {
-           workflow {
-                heading,
-                subheading,
-                description
-           }
-         }
-       }
-     }`
-     )  
+     query WorkflowQuery {
+     site {
+     siteMetadata {
+          workflow {
+               heading,
+               subheading,
+               description
+          }
+     }
+     }
+     }
+     `)  
+
      const workflowItems = data.site.siteMetadata.workflow.map((item) => {
           return (
-          <div class="workflow__col">
-               <div class="card card--top-border">
-                    <h2 class="card__title">{item.heading}</h2>
-                    <p class="card__description">{item.description}</p>
+          <div class="mb-8 last:mb-0 md:mb-0">
+               <div>
+                    <h2 className="mb-4 font-semibold text-center text-echo text-2xl">{item.heading}</h2>
+                    <p class="text-center text-lg leading-relaxed">{item.description}</p>
                </div>
           </div>
           )
      }   
      );
     return (
-     <section class="workflow">
-          <div class="workflow__container">
-               <h2 class="workflow__title">My workflow</h2>
-               <p class="workflow__summary">A little bit about my day-to-day workflow</p>
-               <div class="workflow__sections">
+     <section className="py-16">
+          <div className="container max-w-screen-lg mx-auto px-4">
+               <h2 className="text-center text-4xl mb-4 font-display text-echo font-bold">My workflow</h2>
+               <p className="text-center mb-8 text-xl leading-relaxed">A little bit about my day-to-day workflow</p>
+               <div className="flex-col md:flex-row flex justify-between md:space-x-8">
                     {workflowItems}
                </div>
           </div>
      </section>
      )
 }
+

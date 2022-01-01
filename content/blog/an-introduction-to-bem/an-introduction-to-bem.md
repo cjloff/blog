@@ -100,7 +100,7 @@ The link class modifier will output as ```.navigation__link--is-active``` in you
 
 You may come across a design like the below (hopefully it will look slightly better!):
 
-![BEM example](../images/bem.jpg)
+![BEM example](./bem.jpg)
 
 In the above example I would separate the components like so:
 
