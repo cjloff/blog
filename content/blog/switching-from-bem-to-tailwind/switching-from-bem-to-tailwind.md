@@ -17,8 +17,8 @@ In the past few years I had been using BEM methodology to write most of my CSS a
 
 - One of my main aims working at a agency is being able to easily share components across projects, this is difficult with BEM. Having to manually move the CSS file, HTML and import it into your CSS file can be cumbersome - especially when project specific mixins and variables are needed as well.
 - It's difficult to tell what impact changing a existing BEM class will have, especially if you don't know how it's used which often leads to new classes being bolted on instead, which in turn increases the CSS file size.
-- Due to BEM being descriptive, different team members can come up with different classes for the same component leading to inconsistencies in the CSS, for example all these modifiers could  be used for a component that is promoted in some way: ```--is-featured```, ```--highlight```, ```--is-promoted```, ```--special```. 
-- Even though BEM provides a methodology for writing CSS, it easy for inconsistencies to appear in the code especially in a project with multiple team members e.g. nested element selectors when really it should be split up into multiple BEM components: ```.block__element__element--modifier--modifier```
+- Due to BEM being descriptive it's difficult to come up with names for components / elements / modifiers, for example the following modifiers could all be used for a component that is promoted in some way: ```--is-featured```, ```--highlight```, ```--is-promoted```, ```--special```. 
+- Even though BEM provides a methodology for writing CSS, it easy for inconsistencies to appear in the code e.g. using nested element selectors when really it should be split up into multiple BEM components: ```.block__element__element--modifier--modifier```
 
 <h2>Comparing BEM v Tailwind</h2>
 
