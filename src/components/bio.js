@@ -4,7 +4,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
-
+import { motion } from "framer-motion"
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -13,7 +13,17 @@ const Bio = () => {
   return (
     <div>
       <div className="container max-w-screen-lg mx-auto px-4 text-center flex flex-col items-center">
-        <div className="rounded-full border-4 overflow-hidden  border-bravo shadow-xl -bottom-20 relative bg-white">
+        <motion.div 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 0 }}
+        transition={{
+          type: "intertia",
+          mass: 0.5,
+          stiffness: 50,
+          duration: 0.5
+        }}
+        className="rounded-full border-4 overflow-hidden  border-bravo shadow-xl -bottom-20 relative bg-white">
           <StaticImage
             className=""
             layout="fixed"
@@ -24,7 +34,7 @@ const Bio = () => {
             quality={95}
             alt="Profile picture"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   )

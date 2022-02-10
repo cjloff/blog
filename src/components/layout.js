@@ -1,4 +1,5 @@
 import * as React from "react"
+import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import Navigation from './navigation'
 import Footer from './footer'
@@ -26,17 +27,26 @@ const Layout = ({ location, title, children }) => {
       intro = null
     }
   return (
-    <div>     
-      <header className="py-8 hero-bg">
+    <div class="overflow-x-hidden">     
+      <header  className="py-8 hero-bg">
         <div className="container max-w-screen-lg mx-auto px-4 flex justify-between">
           {header}
           <Navigation />
         </div>
         { intro }
       </header>
-      <main>
-        {children}
-      </main>
+      <motion.main
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 0 }}
+          transition={{
+            type: "intertia",
+            mass: 0.5,
+            stiffness: 50,
+            duration: 0.5
+          }}>
+          {children}
+        </motion.main>
       <Footer />
     </div>
   )
