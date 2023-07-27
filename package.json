@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "framer-motion": "^6.2.6",
-    "gatsby": "^4.4.0",
+    "gatsby": "^4.24.0",
     "gatsby-plugin-feed": "^4.4.0",
     "gatsby-plugin-gatsby-cloud": "^4.4.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
