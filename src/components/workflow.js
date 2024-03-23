@@ -19,7 +19,7 @@ export default function Workflow() {
 
      const workflowItems = data.site.siteMetadata.workflow.map((item) => {
           return (
-          <div class="mb-8 last:mb-0 md:mb-0">
+          <div class="mb-8 last:mb-0 md:mb-0 flex-1">
                <div>
                     <h2 className="mb-4 font-semibold text-center text-echo text-2xl">{item.heading}</h2>
                     <p class="text-center text-lg leading-relaxed">{item.description}</p>
