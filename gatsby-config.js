@@ -3,7 +3,7 @@ module.exports = {
     title: `Chester Loffman`,
     author: {
       name: `Chester Loffman`,
-      summary: `I'm Chester Loffman, a creative and self-motivated frontend developer with 8 years of experience building websites and applications in fast-paced collaborative environments. Seasoned in CSS, HTML, Javascript and Umbraco integrations. I also enjoy keeping up to date with the latest technologies and techniques in the ever-moving landscape of frontend development.`,
+      summary: `I'm Chester Loffman, a creative and self-motivated frontend developer with 10 years of experience building websites and applications in fast-paced collaborative environments. Seasoned in CSS, HTML, Javascript and Umbraco integrations. I also enjoy keeping up to date with the latest technologies and techniques in the ever-moving landscape of frontend development.`,
     },
     description: `Chester Loffman`,
     siteUrl: `http://www.chesterloffman.co.uk`,
@@ -11,8 +11,8 @@ module.exports = {
       twitter: `chesterloffman`,
     },
     workflow: [
-      {heading: 'Frontend', subheading: 'My frontend workflow', description: 'In my day-to-day role I work with HTML, CSS, Javascript (ES6) and Vue.js. I use webpack and gulp as my build tools. VS code is my code editor of choice.'},
-      {heading: 'CMS + Static Sites', subheading: 'Umbraco', description: 'I\'m a certified Umbraco Developer and have worked on numerous end-to-end Umbraco builds. I also have experience with static site generators (this blog was developed using Gatsby).'},
+      {heading: 'Frontend', subheading: 'My frontend workflow', description: 'In my day-to-day role I work with HTML, CSS, Javascript (ES6) and Vue.js (Vue 3/Nuxt).'},
+      {heading: 'CMS', subheading: 'Umbraco', description: 'I\'m a Umbraco Certified Professional and have worked on numerous end-to-end Umbraco builds.'},
       {heading: 'Methodology', subheading: 'My approach to development', description: 'I\'m a big advocate of a modular approach to web development by breaking down layouts into composable components through the use of pattern libraries.'},
     ]
   },
