@@ -13,7 +13,7 @@ module.exports = {
     workflow: [
       {heading: 'Frontend', subheading: 'My frontend workflow', description: 'In my day-to-day role I work with HTML, CSS, Javascript (ES6) and Vue.js (Vue 3/Nuxt).'},
       {heading: 'CMS', subheading: 'Umbraco', description: 'I\'m a Umbraco Certified Professional and have worked on numerous end-to-end Umbraco builds.'},
-      {heading: 'Methodology', subheading: 'My approach to development', description: 'I\'m a big advocate of a modular approach to web development by breaking down layouts into composable components through the use of pattern libraries.'},
+      {heading: 'Methodology', subheading: 'My approach to development', description: 'Approaching development in a modular way by breaking down designs into re-usable components and composing them into layouts using pattern libraries.'},
     ]
   },
   plugins: [
