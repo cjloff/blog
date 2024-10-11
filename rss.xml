@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Chester Loffman Blog RSS Feed]]></title><description><![CDATA[Chester Loffman]]></description><link>http://www.chesterloffman.co.uk</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Oct 2024 11:17:15 GMT</lastBuildDate><item><title><![CDATA[Switching from BEM to Tailwind]]></title><description><![CDATA[Tailwind is a utility first framework for writing CSS, the framework offers a suite of utility classes to build applications and websites. A…]]></description><link>http://www.chesterloffman.co.uk/blog/switching-from-bem-to-tailwind/switching-from-bem-to-tailwind/</link><guid isPermaLink="false">http://www.chesterloffman.co.uk/blog/switching-from-bem-to-tailwind/switching-from-bem-to-tailwind/</guid><pubDate>Sat, 11 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Tailwind is a utility first framework for writing CSS, the framework offers a suite of utility classes to build applications and websites. A typical tailwind component may look like this:&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Chester Loffman Blog RSS Feed]]></title><description><![CDATA[Chester Loffman]]></description><link>http://www.chesterloffman.co.uk</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Oct 2024 12:26:24 GMT</lastBuildDate><item><title><![CDATA[Switching from BEM to Tailwind]]></title><description><![CDATA[Tailwind is a utility first framework for writing CSS, the framework offers a suite of utility classes to build applications and websites. A…]]></description><link>http://www.chesterloffman.co.uk/blog/switching-from-bem-to-tailwind/switching-from-bem-to-tailwind/</link><guid isPermaLink="false">http://www.chesterloffman.co.uk/blog/switching-from-bem-to-tailwind/switching-from-bem-to-tailwind/</guid><pubDate>Sat, 11 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Tailwind is a utility first framework for writing CSS, the framework offers a suite of utility classes to build applications and websites. A typical tailwind component may look like this:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;bg-blue p-4 text-white block rounded-md&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
     Click me!
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -167,7 +167,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/046894b7cbcae70f7948702879cdf73a/d0fa6/cls-component.png&quot;
+    href=&quot;/static/046894b7cbcae70f7948702879cdf73a/d0fa6/cls-component.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -180,13 +180,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;CLS example&quot;
         title=&quot;CLS example&quot;
-        src=&quot;/blog/static/046894b7cbcae70f7948702879cdf73a/f058b/cls-component.png&quot;
-        srcset=&quot;/blog/static/046894b7cbcae70f7948702879cdf73a/c26ae/cls-component.png 158w,
-/blog/static/046894b7cbcae70f7948702879cdf73a/6bdcf/cls-component.png 315w,
-/blog/static/046894b7cbcae70f7948702879cdf73a/f058b/cls-component.png 630w,
-/blog/static/046894b7cbcae70f7948702879cdf73a/40601/cls-component.png 945w,
-/blog/static/046894b7cbcae70f7948702879cdf73a/78612/cls-component.png 1260w,
-/blog/static/046894b7cbcae70f7948702879cdf73a/d0fa6/cls-component.png 1263w&quot;
+        src=&quot;/static/046894b7cbcae70f7948702879cdf73a/f058b/cls-component.png&quot;
+        srcset=&quot;/static/046894b7cbcae70f7948702879cdf73a/c26ae/cls-component.png 158w,
+/static/046894b7cbcae70f7948702879cdf73a/6bdcf/cls-component.png 315w,
+/static/046894b7cbcae70f7948702879cdf73a/f058b/cls-component.png 630w,
+/static/046894b7cbcae70f7948702879cdf73a/40601/cls-component.png 945w,
+/static/046894b7cbcae70f7948702879cdf73a/78612/cls-component.png 1260w,
+/static/046894b7cbcae70f7948702879cdf73a/d0fa6/cls-component.png 1263w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -202,7 +202,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/6542a72742a8320a98ad0a2d9f39c070/29114/cls-unloaded-image-no-att.png&quot;
+    href=&quot;/static/6542a72742a8320a98ad0a2d9f39c070/29114/cls-unloaded-image-no-att.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -215,13 +215,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;CLS example&quot;
         title=&quot;CLS example&quot;
-        src=&quot;/blog/static/6542a72742a8320a98ad0a2d9f39c070/f058b/cls-unloaded-image-no-att.png&quot;
-        srcset=&quot;/blog/static/6542a72742a8320a98ad0a2d9f39c070/c26ae/cls-unloaded-image-no-att.png 158w,
-/blog/static/6542a72742a8320a98ad0a2d9f39c070/6bdcf/cls-unloaded-image-no-att.png 315w,
-/blog/static/6542a72742a8320a98ad0a2d9f39c070/f058b/cls-unloaded-image-no-att.png 630w,
-/blog/static/6542a72742a8320a98ad0a2d9f39c070/40601/cls-unloaded-image-no-att.png 945w,
-/blog/static/6542a72742a8320a98ad0a2d9f39c070/78612/cls-unloaded-image-no-att.png 1260w,
-/blog/static/6542a72742a8320a98ad0a2d9f39c070/29114/cls-unloaded-image-no-att.png 1920w&quot;
+        src=&quot;/static/6542a72742a8320a98ad0a2d9f39c070/f058b/cls-unloaded-image-no-att.png&quot;
+        srcset=&quot;/static/6542a72742a8320a98ad0a2d9f39c070/c26ae/cls-unloaded-image-no-att.png 158w,
+/static/6542a72742a8320a98ad0a2d9f39c070/6bdcf/cls-unloaded-image-no-att.png 315w,
+/static/6542a72742a8320a98ad0a2d9f39c070/f058b/cls-unloaded-image-no-att.png 630w,
+/static/6542a72742a8320a98ad0a2d9f39c070/40601/cls-unloaded-image-no-att.png 945w,
+/static/6542a72742a8320a98ad0a2d9f39c070/78612/cls-unloaded-image-no-att.png 1260w,
+/static/6542a72742a8320a98ad0a2d9f39c070/29114/cls-unloaded-image-no-att.png 1920w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -238,7 +238,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/c4764cf5cb706f447ecf4b99bda544a9/d0fa6/cls-unloaded-image-att.png&quot;
+    href=&quot;/static/c4764cf5cb706f447ecf4b99bda544a9/d0fa6/cls-unloaded-image-att.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -251,13 +251,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;CLS example&quot;
         title=&quot;CLS example&quot;
-        src=&quot;/blog/static/c4764cf5cb706f447ecf4b99bda544a9/f058b/cls-unloaded-image-att.png&quot;
-        srcset=&quot;/blog/static/c4764cf5cb706f447ecf4b99bda544a9/c26ae/cls-unloaded-image-att.png 158w,
-/blog/static/c4764cf5cb706f447ecf4b99bda544a9/6bdcf/cls-unloaded-image-att.png 315w,
-/blog/static/c4764cf5cb706f447ecf4b99bda544a9/f058b/cls-unloaded-image-att.png 630w,
-/blog/static/c4764cf5cb706f447ecf4b99bda544a9/40601/cls-unloaded-image-att.png 945w,
-/blog/static/c4764cf5cb706f447ecf4b99bda544a9/78612/cls-unloaded-image-att.png 1260w,
-/blog/static/c4764cf5cb706f447ecf4b99bda544a9/d0fa6/cls-unloaded-image-att.png 1263w&quot;
+        src=&quot;/static/c4764cf5cb706f447ecf4b99bda544a9/f058b/cls-unloaded-image-att.png&quot;
+        srcset=&quot;/static/c4764cf5cb706f447ecf4b99bda544a9/c26ae/cls-unloaded-image-att.png 158w,
+/static/c4764cf5cb706f447ecf4b99bda544a9/6bdcf/cls-unloaded-image-att.png 315w,
+/static/c4764cf5cb706f447ecf4b99bda544a9/f058b/cls-unloaded-image-att.png 630w,
+/static/c4764cf5cb706f447ecf4b99bda544a9/40601/cls-unloaded-image-att.png 945w,
+/static/c4764cf5cb706f447ecf4b99bda544a9/78612/cls-unloaded-image-att.png 1260w,
+/static/c4764cf5cb706f447ecf4b99bda544a9/d0fa6/cls-unloaded-image-att.png 1263w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -574,7 +574,7 @@ In terms of the template we are firstly going to create a text field bound to th
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/18761d0101a8f102b1870875e75ef3d4/c83bb/bem.jpg&quot;
+    href=&quot;/static/18761d0101a8f102b1870875e75ef3d4/c83bb/bem.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -587,13 +587,13 @@ In terms of the template we are firstly going to create a text field bound to th
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;BEM example&quot;
         title=&quot;BEM example&quot;
-        src=&quot;/blog/static/18761d0101a8f102b1870875e75ef3d4/828fb/bem.jpg&quot;
-        srcset=&quot;/blog/static/18761d0101a8f102b1870875e75ef3d4/ff44c/bem.jpg 158w,
-/blog/static/18761d0101a8f102b1870875e75ef3d4/a6688/bem.jpg 315w,
-/blog/static/18761d0101a8f102b1870875e75ef3d4/828fb/bem.jpg 630w,
-/blog/static/18761d0101a8f102b1870875e75ef3d4/0ede0/bem.jpg 945w,
-/blog/static/18761d0101a8f102b1870875e75ef3d4/3ac88/bem.jpg 1260w,
-/blog/static/18761d0101a8f102b1870875e75ef3d4/c83bb/bem.jpg 4608w&quot;
+        src=&quot;/static/18761d0101a8f102b1870875e75ef3d4/828fb/bem.jpg&quot;
+        srcset=&quot;/static/18761d0101a8f102b1870875e75ef3d4/ff44c/bem.jpg 158w,
+/static/18761d0101a8f102b1870875e75ef3d4/a6688/bem.jpg 315w,
+/static/18761d0101a8f102b1870875e75ef3d4/828fb/bem.jpg 630w,
+/static/18761d0101a8f102b1870875e75ef3d4/0ede0/bem.jpg 945w,
+/static/18761d0101a8f102b1870875e75ef3d4/3ac88/bem.jpg 1260w,
+/static/18761d0101a8f102b1870875e75ef3d4/c83bb/bem.jpg 4608w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
