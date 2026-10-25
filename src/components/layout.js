@@ -3,7 +3,6 @@ import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import Navigation from './navigation'
 import Footer from './footer'
-import Bio from "./bio"
 
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`
@@ -16,16 +15,6 @@ const Layout = ({ location, title, children }) => {
           <Link className="text-2xl text-white border-b-2 border-bravo font-display font-bold" to="/">CL</Link>
         </h1>
       )
-    if (isRootPath) {
-      intro = (
-        <div>
-          <Bio />
-        </div>
-      )
-    }
-    else {
-      intro = null
-    }
   return (
     <div class="overflow-x-hidden">     
       <header  className="py-8 hero-bg">
