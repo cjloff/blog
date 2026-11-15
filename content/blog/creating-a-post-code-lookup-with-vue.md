@@ -1,5 +1,7 @@
 ---
+url: "creating-a-post-code-lookup-with-vue"
 title: "Creating a postcode lookup with Vue.js"
+description: "For this tutorial we’re going to create a postcode look-up component using Vue.js that will allow the user to: Enter a postcode and search…"
 date: "2019-08-28"
 ---
 

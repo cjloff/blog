@@ -1,5 +1,7 @@
 ---
+url: "transpiling-javascript-and-including-polyfills"
 title: "Transpiling javascript and including polyfills with webpack, babel-preset-env and core-js"
+description: "I am going to use babel-preset-env to transpile our JS from ES6 to ES5 and core-js (a library of polyfills) to include the polyfills needed…"
 date: "2021-03-18"
 ---
 

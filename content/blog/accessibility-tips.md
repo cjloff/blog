@@ -1,5 +1,7 @@
 ---
+url: 'accessibility-tips'
 title: "5 Accessibility Tips"
+description: "As a frontend developer it is important to bake accessibility into your website projects from the get-go, here are some of the ways you can…"
 date: "2020-04-11"
 ---
 

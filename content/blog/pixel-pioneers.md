@@ -1,5 +1,7 @@
 ---
+url: "pixel-pioneers"
 title: "Pixel Pioneers"
+description: "Last month I attended Pixel Pioneers at the MShed in Bristol (the city I live in), a one day conference of design and frontend talks..."
 date: "2019-08-20"
 ---
 

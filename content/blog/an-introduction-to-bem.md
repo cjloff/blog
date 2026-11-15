@@ -1,5 +1,7 @@
 ---
+url: 'an-introduction-to-bem'
 title: "An introduction to BEM"
+description: "Do any of these apply to you when writing CSS? Find it difficult to name elements in CSS. Find it difficult to manage sprawling CSS files…"
 date: "2019-08-26"
 ---
 

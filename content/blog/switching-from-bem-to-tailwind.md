@@ -1,5 +1,7 @@
 ---
+url: "switching-from-bem-to-tailwind"
 title: "Switching from BEM to Tailwind"
+description: "Tailwind is a utility first framework for writing CSS, the framework offers a suite of utility classes to build applications and websites."
 date: "2021-12-11"
 ---
 
